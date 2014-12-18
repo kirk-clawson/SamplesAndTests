@@ -3,6 +3,8 @@
   <ItemGroup>
     <ClInclude Include="Precompiled.h" />
     <ClInclude Include="Utlility.h" />
+    <ClInclude Include="SafeHandle.h" />
+    <ClInclude Include="Debug.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Precompiled.cpp" />

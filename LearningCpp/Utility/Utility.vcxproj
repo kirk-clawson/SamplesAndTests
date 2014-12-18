@@ -78,7 +78,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Debug.h" />
     <ClInclude Include="Precompiled.h" />
+    <ClInclude Include="SafeHandle.h" />
     <ClInclude Include="Utlility.h" />
   </ItemGroup>
   <ItemGroup>
