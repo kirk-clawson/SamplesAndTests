@@ -1,7 +1,8 @@
 #include "stdafx.h"
 #include "Person.h"
 #include <string>
-using namespace std;
+
+using std::string;
 
 Person::Person(string first, string last, int age) : firstName(first), lastName(last), age(age)
 {
