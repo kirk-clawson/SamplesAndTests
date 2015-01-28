@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DeviceResources.cpp" />
+    <ClCompile Include="FileReader.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

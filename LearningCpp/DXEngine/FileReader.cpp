@@ -47,7 +47,7 @@ class FileReader
 												ULONG_PTR NumberOfBytesTransferred,
 												PTP_IO Io)
 	{
-		io_context* context = (io_context*)overlapped;
+		io_context* context = reinterpret_cast<io_context*>(overlapped);
 		if (error == NO_ERROR) {
 			if (context->m_fileReader->m_chunk_handler) {
 				context->m_fileReader->m_chunk_handler(context->m_fileReader->m_buffer.get(), NumberOfBytesTransferred);
@@ -120,25 +120,25 @@ public:
 	}
 };
 
-int wmain(int argc, wchar_t** argv)
-{
-	
-		std::wcout << L"Asynchronous read" << std::endl;
-		std::vector<task<void>> done;
-
-		for (int i = 2; i<argc; ++i)
-		{
-			auto fileName = argv[i];
-			std::wcout << L"reading " << fileName << std::endl;
-			FileReader* reader = new FileReader(fileName);
-
-			auto t = reader->read_bytes().then([=](std::vector<byte> v) {
-				std::wcout << L"done reading " << v.size() << L" bytes from '" << fileName << "'." << std::endl;
-				delete reader;
-			});
-			done.push_back(t);
-		}
-		when_all(done.begin(), done.end()).wait();
-	
-	return 0;
-}
+//int wmain(int argc, wchar_t** argv)
+//{
+//	
+//		std::wcout << L"Asynchronous read" << std::endl;
+//		std::vector<task<void>> done;
+//
+//		for (int i = 2; i<argc; ++i)
+//		{
+//			auto fileName = argv[i];
+//			std::wcout << L"reading " << fileName << std::endl;
+//			FileReader* reader = new FileReader(fileName);
+//
+//			auto t = reader->read_bytes().then([=](std::vector<byte> v) {
+//				std::wcout << L"done reading " << v.size() << L" bytes from '" << fileName << "'." << std::endl;
+//				delete reader;
+//			});
+//			done.push_back(t);
+//		}
+//		when_all(done.begin(), done.end()).wait();
+//	
+//	return 0;
+//}

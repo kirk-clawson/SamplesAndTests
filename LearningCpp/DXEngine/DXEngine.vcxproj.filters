@@ -23,5 +23,8 @@
     <ClCompile Include="DeviceResources.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="FileReader.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
