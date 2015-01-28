@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Utility\Utility.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloBoost", "HelloBoost\HelloBoost.vcxproj", "{73B82CA8-08FD-42B1-9A5C-0669CDEDB96B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXEngine", "DXEngine\DXEngine.vcxproj", "{AD9C3AFE-090D-42B5-8CE1-A9E717C3008C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -45,6 +47,10 @@ Global
 		{73B82CA8-08FD-42B1-9A5C-0669CDEDB96B}.Debug|Win32.Build.0 = Debug|Win32
 		{73B82CA8-08FD-42B1-9A5C-0669CDEDB96B}.Release|Win32.ActiveCfg = Release|Win32
 		{73B82CA8-08FD-42B1-9A5C-0669CDEDB96B}.Release|Win32.Build.0 = Release|Win32
+		{AD9C3AFE-090D-42B5-8CE1-A9E717C3008C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AD9C3AFE-090D-42B5-8CE1-A9E717C3008C}.Debug|Win32.Build.0 = Debug|Win32
+		{AD9C3AFE-090D-42B5-8CE1-A9E717C3008C}.Release|Win32.ActiveCfg = Release|Win32
+		{AD9C3AFE-090D-42B5-8CE1-A9E717C3008C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
