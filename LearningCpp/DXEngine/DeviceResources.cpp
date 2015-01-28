@@ -346,12 +346,12 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 }
 
 // This method is called when the CoreWindow is created (or re-created).
-void DX::DeviceResources::SetWindow(CoreWindow^ window)
+void DX::DeviceResources::SetWindow(HWND window)
 {
 	DisplayInformation^ currentDisplayInformation = DisplayInformation::GetForCurrentView();
 
 	m_window = window;
-	m_logicalSize = Windows::Foundation::Size(window->Bounds.Width, window->Bounds.Height);
+	m_logicalSize = DX::Size(window->Bounds.Width, window->Bounds.Height);
 	m_dpi = currentDisplayInformation->LogicalDpi;
 	m_d2dContext->SetDpi(m_dpi, m_dpi);
 
